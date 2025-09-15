@@ -1,0 +1,26 @@
+export default {
+  expo: {
+    name: "AlwaysON",
+    slug: "alwayson-mobile",
+    version: "1.0.0",
+    orientation: "portrait",
+    userInterfaceStyle: "light",
+    assetBundlePatterns: ["**/*"],
+    platforms: ["ios", "android"],
+    sdkVersion: "54.0.0",
+    ios: {
+      supportsTablet: false,
+      bundleIdentifier: "com.alwayson.mobile",
+      infoPlist: {
+        NSCellularDataUsageInfo: "This app uses cellular data to provide backup internet connectivity through eSIM technology."
+      },
+      entitlements: {
+        "com.apple.developer.cellular-plan-provisioning": true
+      }
+    },
+    android: {
+      package: "com.alwayson.mobile"
+    },
+    plugins: []
+  }
+};
